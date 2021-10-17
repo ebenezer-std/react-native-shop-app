@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home.js';
 import Login from './components/Login.js';
-
+import Cart from './components/Cart.js'
 const App =()=>{
   
   const MainNavigator = createStackNavigator()
@@ -14,9 +14,11 @@ const App =()=>{
    
     <View style={{flex:1}}>
       <NavigationContainer>
-        <MainNavigator.Navigator initialRouteName = "Home">
+        <MainNavigator.Navigator initialRouteName = "Cart">
           <MainNavigator.Screen name="Login" component={Login} /> 
           <MainNavigator.Screen name="Home" component={Home} />      
+          <MainNavigator.Screen name="Cart" component={Cart} />  
+
            </MainNavigator.Navigator>
       </NavigationContainer>
       
